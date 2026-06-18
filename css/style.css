@@ -1,0 +1,357 @@
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #222;
+}
+
+/* HEADER UNIFICADO */
+header {
+  position: relative;
+  background: linear-gradient(135deg, #a300ee, #00259d);
+  color: rgb(237, 232, 232);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* LOGO SENA (Para el contenedor <div>) */
+.logosena {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 3px solid white;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* IMAGEN DEL LOGO SENA */
+.logo-sena {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* NAV */
+nav {
+  background: #3d1166;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: rgb(231, 215, 215);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #39A900;
+  transition: 0.3s;
+}
+
+/* HERO CON IMAGEN CORREGIDA (Evita duplicados) */
+.hero {
+  width: 100%;
+  background: linear-gradient(130deg, #a300ee, #00259d);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.img-hero {
+  max-width: 55%; /* Mantiene la proporción del 53% que tenías antes */
+  height: auto;
+  display: block;
+}
+
+/* SECCIÓN EVENTO CORREGIDA (Vinculada al ID de tu HTML) */
+#evento {
+  padding: 60px 20px;
+  max-width: 1000px;
+  background: white;
+  margin: 40px auto; /* Centra la sección en la página */
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  text-align: justify;
+}
+
+#eventoTitulo {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 35px;
+  color: #153683;
+}
+
+#eventoTexto {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #333;
+}
+
+/* ACTIVIDADES (Para que se alineen en filas) */
+#actividades {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#actividades .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+#actividades .card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+/* PALABRAS CLAVE */
+#palabras-clave {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#palabras-clave .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#palabras-clave .card {
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 3px 10px rgba(0,0,0,.15);
+  font-weight: bold;
+  transition: .3s;
+}
+
+#palabras-clave .card:hover {
+  transform: translateY(-5px);
+  background: #39A900;
+  color: white;
+}
+
+/* GLOSARIO / TABLAS */
+#glosarioTitulo {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00324D;
+  margin: 40px 0 30px 0;
+}
+
+table {
+  width: 95%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+thead {
+  background: #39A900;
+  color: white;
+}
+
+th {
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+tr:hover {
+  background: #e8f5e9;
+  transition: 0.3s;
+}
+
+/* Ancho de columnas */
+td:nth-child(1) {
+  width: 20%;
+  font-weight: bold;
+}
+
+td:nth-child(2) {
+  width: 25%;
+}
+
+td:nth-child(3) {
+  width: 55%;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left: 4px solid #0463bb;
+  padding-left: 20px;
+}
+
+/* ==========================================
+   GALERÍA CONVERTIDA A CARRUSEL (MEJORADO)
+============================================= */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.gallery {
+  display: block; 
+  width: 350px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: none; 
+}
+
+.gallery-img.active {
+  display: block; 
+  animation: fadeIn 0.4s ease-in-out; 
+}
+
+.btn-gallery {
+  background: #3b47f5;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; 
+  transition: 0.2s;
+}
+
+.btn-gallery:hover {
+  background: #1d29d4;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* VIDEO */
+#video {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f4f7fa;
+}
+
+#videoTitulo {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #0171e0;
+}
+
+.video-container {
+  max-width: 900px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.video-container video {
+  width: 100%;
+  display: block;
+}
+
+/* BOTONES */
+button {
+  background: #3b47f5;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d29d4;
+}
+
+/* FOOTER */
+footer {
+  background: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .logosena {
+    position: static; /* Envía el logo arriba del título en celulares */
+    margin: 0 auto 15px auto;
+  }
+
+  .img-hero {
+    max-width: 85%; /* Agranda la imagen en pantallas pequeñas */
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
